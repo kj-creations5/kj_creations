@@ -1,0 +1,202 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #fdf5f5; /* Soft off-white */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Card Container */
+.card-container {
+  background: #fff url('./images/bg.jpg'); /* Soft floral pattern */
+  background-size: cover;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  text-align: center;
+  border: 8px solid white;
+}
+
+/* Header */
+.header {
+  padding: 40px 20px 20px;
+}
+
+.logo-container .logo {
+  width: 175px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.header h1 {
+  color: #d64d68;
+  /* font-family: 'Playfair Display', serif; */
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.header .tagline {
+  font-style: italic;
+  color: #b57a84;
+  font-size: 0.9rem;
+}
+
+/* Wrapper to contain the overlapping layers */
+.social-wrapper {
+  position: relative;
+  height: 125px; /* Adjust height based on your needs */
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Base style for all decorative rectangles */
+.bg-layer, .social-main-card {
+  position: absolute;
+  width: 110%; /* Slightly wider than the container to bleed off edges */
+  height: 145px;
+  border-radius: 40px;
+}
+
+/* 1. Bottom Layer (Lightest/Pinkest) */
+.layer-bottom {
+  background: linear-gradient(90deg, #ffdee1 0%, #ffcbd1 100%);
+  transform: rotate(8deg);
+  z-index: 1;
+  opacity: 0.7;
+}
+
+/* 2. Middle Layer (Medium tone) */
+.layer-middle {
+  background: linear-gradient(90deg, #ffb7b7 0%, #ff9a9e 100%);
+  transform: rotate(-5deg);
+  z-index: 2;
+}
+
+/* 3. Top Main Card (Contains the icons) */
+.social-main-card {
+  background: linear-gradient(90deg, #fbc2eb 0%, #a6c1ee 100%); /* Example gradient */
+  /* Or use the specific orange-pink from your image: */
+  background: linear-gradient(90deg, #ffc3a0 0%, #ffafbd 100%);
+  transform: rotate(3deg);
+  z-index: 3;
+  display: flex;
+  padding: 30px 25px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* Ensure content inside doesn't look tilted */
+/* Social Media Section (The Overlapping Banner) */
+.social-section {
+  background: linear-gradient(135deg, #ffc3bc 0%, #ff9a9e 100%);
+  margin: 20px -10px; /* Slight overflow for the "tilted" look */
+  padding: 30px 25px;
+  transform: rotate(-2deg); /* Creates that slightly offset look in the image */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.social-links {
+  transform: rotate(-3deg); /* Reset rotation for the icons themselves */
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.social-item {
+  text-decoration: none;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 8px;
+  font-size: 1.5rem;
+  color: #ff9a9e; /* Pink tone */
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.icon-circle:hover {
+  transform: scale(1.1);
+}
+
+/* Product Section */
+.products {
+  padding: 30px 20px;
+}
+
+.products h2 {
+  color: #d64d68;
+  margin-bottom: 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.product-card {
+  background: #fff0f0;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.product-card p {
+  font-size: 0.7rem;
+  margin-top: 8px;
+  color: #b57a84;
+}
+
+/* Footer Button */
+.footer {
+  padding-bottom: 40px;
+}
+
+.cta-button {
+  background: #d64d68;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(214, 77, 104, 0.3);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 400px) {
+  .social-links { gap: 10px; }
+  .icon-circle { width: 50px; height: 50px; font-size: 1.2rem; }
+}
