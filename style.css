@@ -262,7 +262,111 @@ body {
   letter-spacing: 1px;
   cursor: pointer;
   box-shadow: 0 5px 15px rgba(214, 77, 104, 0.3);
+  text-decoration: none ;
 }
+/* Intro Paragraph Styling */
+.k-points-intro {
+    padding: 20px;
+    margin: 10px 20px;
+    background: linear-gradient(135deg, #fff0f2 0%, #ffffff 100%);
+    border-left: 4px solid #d64d68;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.en-text {
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.ta-text {
+    font-size: 0.85rem;
+    color: #b57a84;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+/* FAQ Styles */
+.k-points-section { padding: 20px; }
+.section-title { color: #d64d68; font-size: 1.2rem; margin-bottom: 15px; text-align: center;}
+
+.faq-item {
+    margin-bottom: 8px;
+    border: 1px solid #ffcbd1;
+    border-radius: 12px;
+    background: #fff;
+    text-align: left;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #d64d68;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 15px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px; /* Increased for long text */
+    padding: 10px 15px 20px;
+}
+
+.faq-item.active { border-color: #d64d68; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+
+/* Internal list styles */
+.points-list, .reward-list, .en-terms, .ta-terms {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+.points-list li, .reward-list li {
+    background: #fff0f2;
+    margin: 4px 0;
+    padding: 8px;
+    border-radius: 8px;
+    color: #d64d68;
+    font-weight: 600;
+}
+
+.wa-check-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.k-points-footer {
+    padding: 0px 25px 43px 25px;
+    color: #d64d68;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+hr { border: 0; border-top: 1px solid #eee; margin: 10px 0; }
 
 /* Responsive Tweaks */
 @media (max-width: 400px) {
